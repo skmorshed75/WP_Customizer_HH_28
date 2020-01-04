@@ -56,6 +56,64 @@ the_post();
 			</div>
 		</div>
 	</header>
+	
+  	<section>
+  		<div class="factorian-content-block-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="section-title wow fadeInUp">
+							<h2>
+							    <?php 
+                                    echo esc_html(get_theme_mod('cust_services_heading',__('OUR Mission Statement','customizer'))); 
+                                    // echo esc_html(get_option('cust_services_heading',__('OUR Mission Statement','customizer')));
+                                ?>							     
+							</h2>							
+						</div>
+					</div>					
+				</div>
+				<?php
+                if(get_theme_mod('cust_services_display_subheading',1)):
+                ?>
+				<div class="row">
+				    <div class="col-md-8 col-md-offset-2">
+				        <h4 class="sub-heading text-center">
+                            <?php 
+                                echo esc_html(get_theme_mod('cust_services_sub_heading',__('This is Subheading of our Mission Statement','customizer')));
+                            ?>
+                        </h4>
+                        <br/>
+				    </div>
+				</div>
+				<?php
+                endif;
+                ?>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-blog wow fadeInRight">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-bg1.jpg" alt="">
+							<h3>How I started my startup with only $100 and got success.</h3>
+							<span>25th June, 2016</span>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-blog wow fadeInUp">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-bg2.jpg" alt="">
+							<h3>How I started my startup with only $100 and got success.</h3>
+							<span>25th June, 2016</span>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-blog wow fadeInLeft">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-bg3.jpg" alt="">
+							<h3>How I started my startup with only $100 and got success.</h3>
+							<span>25th June, 2016</span>
+						</div>
+					</div>
+				</div>
+			</div>
+  		</div>
+  	</section>	
 	<section>
 		<div class="factorian-content-block-area section-padding">
 			<div class="container">
@@ -267,57 +325,6 @@ the_post();
 				</div>
 			</div>
 		</div>  		
-  	</section>
-  	<section>
-  		<div class="factorian-content-block-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-md-offset-4">
-						<div class="section-title wow fadeInUp">
-							<h2>
-							    <?php 
-                                    echo esc_html(get_theme_mod('cust_services_heading',__('OUR Mission Statement','customizer'))); 
-                                    // echo esc_html(get_option('cust_services_heading',__('OUR Mission Statement','customizer')));
-                                ?>							     
-							</h2>							
-						</div>
-					</div>					
-				</div>
-				<div class="row">
-				    <div class="col-md-8 col-md-offset-2">
-				        <h4 class="sub-heading text-center">
-                            <?php 
-                                echo esc_html(get_theme_mod('cust_services_sub_heading',__('This is Subheading of our Mission Statement','customizer')));
-                            ?>
-                        </h4>
-                        <br/>
-				    </div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="single-blog wow fadeInRight">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-bg1.jpg" alt="">
-							<h3>How I started my startup with only $100 and got success.</h3>
-							<span>25th June, 2016</span>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-blog wow fadeInUp">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-bg2.jpg" alt="">
-							<h3>How I started my startup with only $100 and got success.</h3>
-							<span>25th June, 2016</span>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-blog wow fadeInLeft">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog-bg3.jpg" alt="">
-							<h3>How I started my startup with only $100 and got success.</h3>
-							<span>25th June, 2016</span>
-						</div>
-					</div>
-				</div>
-			</div>
-  		</div>
   	</section>
   	<?php 
     wp_footer();
