@@ -62,7 +62,7 @@ the_post();
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3">
-						<div class="section-title wow fadeInUp">
+						<div class="section-title wow fadeInUp" id="service-heading">
 							<h2>
 							    <?php 
                                     echo esc_html(get_theme_mod('cust_services_heading',__('OUR Mission Statement','customizer'))); 
@@ -77,7 +77,7 @@ the_post();
                 ?>
 				<div class="row">
 				    <div class="col-md-8 col-md-offset-2">
-				        <h4 class="sub-heading text-center">
+				        <h4 class="sub-heading text-center" id="service-subheading">
                             <?php 
                                 echo esc_html(get_theme_mod('cust_services_sub_heading',__('This is Subheading of our Mission Statement','customizer')));
                             ?>

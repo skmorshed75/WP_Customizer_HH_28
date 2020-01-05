@@ -8,7 +8,8 @@ function cust_customizer_settings($wp_customizer){
     
     $wp_customizer->add_setting('cust_services_heading',array(
         'default' => 'Mission Heading',
-        'transport' => 'refresh', //postMessage for javascript
+        'transport' => 'postMessage'
+        //'transport' => 'refresh', //postMessage for javascript
         //'type' => 'option' // get_theme_mod or option
     ));    
     $wp_customizer->add_control('cust_services_heading_ctrl',array(
@@ -26,7 +27,7 @@ function cust_customizer_settings($wp_customizer){
 
     $wp_customizer->add_setting('cust_who_we_are_icon_color',array(
         'default' => '#face69',
-        'transport' => 'refresh'
+        'transport' => 'postMessage'
     ));
     $wp_customizer->add_control(new WP_Customize_Color_Control($wp_customizer,'cust_who_we_are_icon_color_ctrl', array(
         'label' => __('Icon Color','customizer'),
@@ -53,7 +54,7 @@ function cust_customizer_settings($wp_customizer){
     
     $wp_customizer->add_setting('cust_services_subheading',array(
         'default' => 'This is subheading for Services Section',
-        'transport' => 'refresh'
+        'transport' => 'postMessage'
     ));
     $wp_customizer->add_control('cust_services_subheading_ctrl',array(
         'label' => __('Services Sub-Heading','customizer'),

@@ -15,7 +15,7 @@
 		<![endif]-->
 		
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 	<header>
 		<div class="hiru-area">
 			<div class="header-top-area">
