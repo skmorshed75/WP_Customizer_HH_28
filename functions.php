@@ -12,10 +12,20 @@ function cust_theme_assets(){
     wp_enqueue_style('cust-bootstrap',get_theme_file_uri('/assets/css/bootstrap.min.css'),null,1.0);
     wp_enqueue_style('cust-font-awesome',get_theme_file_uri('/assets/css/font-awesome.min.css'),null, 1.0);
     wp_enqueue_style('cust-owl-carousel', get_theme_file_uri('/assets/css/owl.carousel.css'), null, 1.0);
-    wp_enqueue_style('cust-stylesheet', get_stylesheet_uri(), null, time());
-    //wp_enqueue_style('meal-stylesheet',get_stylesheet_uri(),null, VERSION);
     wp_enqueue_style('cust-responsive',get_theme_file_uri('/assets/css/responsive.css'), null, 1.0);
     wp_enqueue_style('cust-animate', get_theme_file_uri('/assets/css/animate.css'), null, 1.0);
+    wp_enqueue_style('cust-stylesheet', get_stylesheet_uri(), null, time());
+    //Class 28.4
+    $services_icon_color = get_theme_mod('cust_who_we_are_icon_color','face69');
+
+    $services_style =<<<EOD
+        .single-promo i.fa {
+            color:{$services_icon_color};
+        }        
+EOD;
+    wp_add_inline_style('cust-stylesheet',$services_style);
+    //End Class 28.4
+    
     
     wp_enqueue_script('cust-bootstrap', get_theme_file_uri('/assets/js/bootstrap.min.js'), array('jquery'), 1.0, true);
     wp_enqueue_script('cust-owl-carousel', get_theme_file_uri('/assets/js/owl.carousel.min.js'), array('jquery'), 1.0, true);

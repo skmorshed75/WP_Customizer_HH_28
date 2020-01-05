@@ -191,24 +191,48 @@ the_post();
   						<img class="wow fadeInRight"src="<?php echo get_template_directory_uri(); ?>/assets/img/about-bg2.jpg" alt="">
   					</div>
   				</div>
+  				<?php
+                $cust_column = get_theme_mod('cust_who_we_are_number_of_items',4);
+                ?>
   				<div class="row">
-  					<div class="col-md-4">
+  					<div class="col-md-<?php echo esc_attr($cust_column); ?>">
   						<div class="single-promo wow fadeInLeft">
-  							<i class="fa fa-check"></i>
+  							<i class="fa fa-facebook"></i>
   							<h3>Best Product</h3>
   							<p>Noise is round to in it quick timed doors. Written address greatly get attacks inhabit pursuit of things.</p>
   						</div>
   					</div>
-  					<div class="col-md-4">
+  					<div class="col-md-<?php echo esc_attr($cust_column); ?>">
   						<div class="single-promo wow fadeInUp">
-  							<i class="fa fa-check"></i>
+  							<i class="fa fa-youtube"></i>
   							<h3>Proper Quality</h3>
   							<p>Shade being under his bed her. Much read on as draw. Blessing for ignorant exercise any yourself unpacked.</p>
   						</div>
   					</div>
-  					<div class="col-md-4">
+  					<div class="col-md-<?php echo esc_attr($cust_column); ?>">
   						<div class="single-promo wow fadeInRight">
-  							<i class="fa fa-check"></i>
+  							<i class="fa fa-linkedin"></i>
+  							<h3>High Conversion</h3>
+  							<p>Effects present letters inquiry no removed or friends. Desire behind latter me though in. Supposing fastest act.</p>
+  						</div>
+  					</div>
+  					<div class="col-md-<?php echo esc_attr($cust_column); ?>">
+  						<div class="single-promo wow fadeInLeft">
+  							<i class="fa fa-facebook"></i>
+  							<h3>Best Product</h3>
+  							<p>Noise is round to in it quick timed doors. Written address greatly get attacks inhabit pursuit of things.</p>
+  						</div>
+  					</div>
+  					<div class="col-md-<?php echo esc_attr($cust_column); ?>">
+  						<div class="single-promo wow fadeInUp">
+  							<i class="fa fa-youtube"></i>
+  							<h3>Proper Quality</h3>
+  							<p>Shade being under his bed her. Much read on as draw. Blessing for ignorant exercise any yourself unpacked.</p>
+  						</div>
+  					</div>
+  					<div class="col-md-<?php echo esc_attr($cust_column); ?>">
+  						<div class="single-promo wow fadeInRight">
+  							<i class="fa fa-linkedin"></i>
   							<h3>High Conversion</h3>
   							<p>Effects present letters inquiry no removed or friends. Desire behind latter me though in. Supposing fastest act.</p>
   						</div>

@@ -17,6 +17,39 @@ function cust_customizer_settings($wp_customizer){
         'settings' => 'cust_services_heading',
         'type' => 'text'
     ));
+
+    //WHO WE ARE SECTION
+    $wp_customizer->add_section('cust_who_we_are',array(
+        'title' => __('Who We Are?','customizer'),
+        'priority' => 50
+    ));
+
+    $wp_customizer->add_setting('cust_who_we_are_icon_color',array(
+        'default' => '#face69',
+        'transport' => 'refresh'
+    ));
+    $wp_customizer->add_control(new WP_Customize_Color_Control($wp_customizer,'cust_who_we_are_icon_color_ctrl', array(
+        'label' => __('Icon Color','customizer'),
+        'section' => 'cust_who_we_are',
+        'settings' => 'cust_who_we_are_icon_color'
+    )));
+    
+    $wp_customizer->add_setting('cust_who_we_are_number_of_items', array(
+        'default' => 4,
+        'transport' => 'refresh'
+    ));
+    $wp_customizer->add_control('cust_who_we_are_number_of_items_ctrl', array(
+        'label' => __('Number of Items','customizer'),
+        'section' =>'cust_who_we_are',
+        'settings' => 'cust_who_we_are_number_of_items',
+        'type' => 'select',
+        'choices' => array(
+            '4' => '03 in each row',
+            '6' => '02 in each row',
+        )
+    ));
+    //END OF WHO WE ARE SECTION
+    
     
     $wp_customizer->add_setting('cust_services_subheading',array(
         'default' => 'This is subheading for Services Section',
@@ -144,6 +177,8 @@ function cust_customizer_settings($wp_customizer){
         'settings' => 'cust_other_html5_week',
         'type' => 'week'
     ));
+    
+    
     
 }
 add_action('customize_register','cust_customizer_settings');
