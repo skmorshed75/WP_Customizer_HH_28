@@ -60,8 +60,15 @@ function cust_customizer_settings($wp_customizer){
         'label' => __('Services Sub-Heading','customizer'),
         'section' => 'cust_services',
         'settings' => 'cust_services_subheading',
-        'type' => 'textarea'
-    ));
+        'type' => 'textarea',
+        'active_callback' => 'service_display_subheading' //Class 28.6 with function service_display_subheading or below
+//        'active_callback' => function(){
+//            if(get_theme_mod('cust_services_display_subheading') == 1){
+//                return true;
+//            }
+//            return false;
+//        }
+        ));
     
     //Class 28.3    
     $wp_customizer->add_setting('cust_services_display_subheading', array(
@@ -183,3 +190,12 @@ function cust_customizer_settings($wp_customizer){
     
 }
 add_action('customize_register','cust_customizer_settings');
+
+//Class 28.6
+function service_display_subheading(){
+    if(get_theme_mod('cust_services_display_subheading') == 1){
+        return true;
+    }
+    return false;
+}
+//End of Class 28.6
