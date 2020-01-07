@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Landing Page
+*/
 get_header();
 the_post();
 ?>

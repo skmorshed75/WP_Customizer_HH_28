@@ -3,7 +3,10 @@
 function cust_customizer_settings($wp_customizer){
     $wp_customizer->add_section('cust_services',array(
         'title' => __('Factorian Services','customizer'),
-        'priority' => '30'
+        'priority' => '30',
+        'active_callback' => function(){
+            return is_page_template('page-templates/landing.php');
+        }
     ));
     
     $wp_customizer->add_setting('cust_services_heading',array(
@@ -106,8 +109,41 @@ function cust_customizer_settings($wp_customizer){
             'choice4' => __('Choice four','customizer'),
         )
     ));
+    
+    //Class 28.7
+    /*
+    About Page
+    */
+    $wp_customizer->add_section('cust_about', array(
+        'title' => __('About Page','customizer'),
+        'priority' => '40',
+        //Class 28.7
+        //'active_callback' => 'about_section_display'
+        //OR
+        'active_callback' => function(){
+//            if(is_page_template('page-templates/about.php')){
+//                return true;
+//            }
+//            return false;
+        //OR
+        return is_page_template('page-templates/about.php');
+        }        
+    ));
+    
+    $wp_customizer->add_setting('cust_about_heading', array(
+        'default' => 'About Page Heading',
+        'transport' => 'postMessage'
+    ));
+    
+    $wp_customizer->add_control('cus_about_heading_ctrl', array(
+        'label' => __('About Page Heading', 'customizer'),
+        'section' =>'cust_about',
+        'settings' =>'cust_about_heading',
+        'type' => 'text'        
+    ));
+    //End of Class 28.7
         
-    $wp_customizer->add_setting('cust_other_demo_select',array(
+    $wp_customizer->add_setting('cust_other_demo_select', array(
         'default' => 'choice3',
         'transport' => 'refresh'
     ));
@@ -124,7 +160,7 @@ function cust_customizer_settings($wp_customizer){
         )
     ));
     
-    $wp_customizer->add_setting('cust_other_demo_pages',array(
+    $wp_customizer->add_setting('cust_other_demo_pages', array(
         'transport' => 'refresh'
     ));
     $wp_customizer->add_control('cust_other_demo_pages_ctrl', array(
@@ -136,7 +172,7 @@ function cust_customizer_settings($wp_customizer){
         
     ));
     
-    $wp_customizer->add_setting('cust_other_html5_number',array(
+    $wp_customizer->add_setting('cust_other_html5_number', array(
         'transport' => 'refresh'
     ));
     $wp_customizer->add_control('cust_other_html5_number_ctrl', array(
@@ -166,7 +202,7 @@ function cust_customizer_settings($wp_customizer){
         )
     ));
     
-    $wp_customizer->add_setting('cust_other_html5_date',array(
+    $wp_customizer->add_setting('cust_other_html5_date', array(
         'transport' => 'refresh'
     ));
     $wp_customizer->add_control('cust_other_html5_date_ctrl', array(
@@ -176,7 +212,7 @@ function cust_customizer_settings($wp_customizer){
         'type' => 'date',
     ));
     
-    $wp_customizer->add_setting('cust_other_html5_week',array(
+    $wp_customizer->add_setting('cust_other_html5_week', array(
         'transport' => 'refresh'
     ));
     $wp_customizer->add_control('cust_other_html5_week_ctrl', array(
@@ -199,3 +235,14 @@ function service_display_subheading(){
     return false;
 }
 //End of Class 28.6
+
+//Class 28.7
+//function about_section_display(){
+//    if(is_page_template('page-templates/about.php')){
+//        return true;
+//    }
+//    return false;
+//}
+//End Class 28.7
+        
+        

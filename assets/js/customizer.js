@@ -23,4 +23,12 @@
             $('.single-promo i.fa').css("color",newvalue);
         });           
     });
+    
+    //Class 28.7
+    wp.customize('cust_about_heading', function(value){
+        value.bind(function(newvalue){
+            $("#about-heading h1").html(newvalue);
+        });
+    });
+    //End 28.7
 })(jQuery);
