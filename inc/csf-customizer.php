@@ -12,7 +12,8 @@ function customizer_csf_settings($options){
                 'control' => array(
                     'label' => __('About Heading','customizer'),
                     'type' => 'text'
-                )            
+                ),
+                'transport' =>'postMessage',
             ),
             array(
                 'name' => 'about_description',

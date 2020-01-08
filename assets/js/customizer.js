@@ -31,4 +31,12 @@
         });
     });
     //End 28.7
+    
+    //Class 28.9
+    wp.customize('_cs_customize_options[about_heading]', function(value){
+        value.bind(function(newvalue){
+            $("#about-heading h1").html(newvalue);
+        });
+    });
+    //End 28.9
 })(jQuery);
