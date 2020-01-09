@@ -49,6 +49,11 @@ function customizer_csf_settings($options){
     $options[] = array(
         'name' => 'customizer_csf_section_ctrl',
         'title' => __('Codestar Controls','customizer'),
+        //Class 28.10
+        'active_callback' => function(){
+            return false;
+        },
+        //End Class 28.10
         'settings' => array(
             array(
                 'name' => 'switcher',
@@ -61,14 +66,30 @@ function customizer_csf_settings($options){
                 )
             ),
             array(
+                'name' => 'dummy_text',
+                'default' => __('Some Text','customizer'),
+                'control' => array(
+                    'label' => __('Dummy text','customizer'),
+                    'type' => 'text',
+                    'active_callback' => function(){
+                        return cs_get_customize_option('switcher');
+                    }
+                ),
+            ),
+            
+                            
+            array(
                 'name' => 'icon',
                 'control' => array(
                     'type' => 'cs_field',
                     'options' => array(
                         'type' => 'icon',
-                        'title' => __('Select Icon','customizer')
-                    )
-                )
+                        'title' => __('Select Icon','customizer'),
+                    ),
+                    'active_callback' => function(){
+                        return cs_get_customize_option('switcher');
+                    }                    
+                ),              
             ),
             array(
                 'name' => 's_post',

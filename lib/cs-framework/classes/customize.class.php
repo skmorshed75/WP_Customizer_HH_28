@@ -106,6 +106,10 @@ class CSFramework_Customize extends CSFramework_Abstract {
         'priority'    => ( isset( $section['priority'] ) ) ? $section['priority'] : $section_priority,
         'description' => ( isset( $section['description'] ) ) ? $section['description'] : '',
         'panel'       => ( $panel ) ? $panel : '',
+          // Class 28.10
+        'active_callback' => (isset($section['active_callback'])? $section['active_callback'] : ''),
+          // or PHP 7.0 onword
+        ///'active_callback' => $section['active_callback'] ?? '',
       ) );
 
       $setting_priority = 1;
