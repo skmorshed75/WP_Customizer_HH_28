@@ -15,22 +15,26 @@ the_post();
                     <div class="section-title wow fadeInUp" id="about-heading">
                         <h1>
                             <?php
-                            //echo esc_html(get_theme_mod('cust_about_heading', __('About Page Heading','cusomizer')));
+                            echo esc_html(get_theme_mod('cust_about_heading', __('About Page Heading','customizer')));
                             //or Class 28.8
-                            echo esc_html(cs_get_customize_option('about_heading'));
+                            //echo esc_html(cs_get_customize_option('about_heading'));
                             ?>
                         </h1>							
                     </div>
                     <br/>
                 </div>
             </div>
-           <div class="row">
+           <div class="row text-center" id= "about-description">
+                <div class="col-md-8 col-md-offset-2">
                 <p>
                     <?php
                     //Class 28.8
-                    echo esc_html(cs_get_customize_option('about_description'));
+                    //echo esc_html(cs_get_customize_option('about_description'));
+                    //Class 28.11
+                    echo apply_filters('the_content', get_theme_mod('cust_about_description'));
                     ?>
-                </p>                
+                </p>
+                </div>
            </div>
         </div>
     </div>
