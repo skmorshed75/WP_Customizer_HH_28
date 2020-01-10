@@ -38,7 +38,7 @@ the_post();
                     ?>
                 </p>
                 <br/>
-                <h2>Upload an Image</h2>
+                <h2>Upload an Image 28.12</h2>
                 <?php
                 //Class 28.12  
                     //echo get_theme_mod('test_image');
@@ -49,7 +49,7 @@ the_post();
                 ?>
                 <br/>
                 <br/>
-                <h2>Upload an Media</h2>    
+                <h2>Upload an Media 28.13</h2>    
                 <br/>            
                 <br/>            
                 <?php
@@ -58,6 +58,16 @@ the_post();
                     echo wp_get_attachment_image($attachment_id,'thumbnail');
                     
                 //End Class 28.13
+                ?>
+                <h2>Upload a File 28.14</h2>    
+                <br/>            
+                <br/>            
+                <?php
+                //Class 28.14
+                    $attachment_id = attachment_url_to_postid(get_theme_mod('test_file'));
+                    //$attachment_id = get_theme_mod('test_file');
+                    echo $attachment_id;                    
+                //End Class 28.14
                 ?>                
                 </div>
            </div>

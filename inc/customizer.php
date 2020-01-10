@@ -292,16 +292,34 @@ function cust_customizer_settings($wp_customizer){
     $wp_customizer->add_control(
         new WP_Customize_Media_Control(
             $wp_customizer,
-            'cust_test_image2',
+            'test_image2',
             array(
                 'label' => __('Upload a Media', 'customizer'),
                 'section' => 'image_and_upload',
-                'settings' => 'test_image2'
+                //'settings' => 'test_image2'
             )        
         )
     );
   
 //End Class 28.13
+    
+//Class 28.14
+    $wp_customizer->add_setting('test_file', array(
+        'default' => 'Upload File',
+        'transport' => 'refresh'
+    ));
+    $wp_customizer->add_control(
+        new WP_Customize_Upload_Control(
+            $wp_customizer,
+            'test_file',
+            array(
+                'label' => __('Upload a File', 'customizer'),
+                'section' => 'image_and_upload',
+            )        
+        )
+    );
+  
+//End Class 28.14
     
     
 }
