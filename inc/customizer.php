@@ -320,6 +320,29 @@ function cust_customizer_settings($wp_customizer){
     );
   
 //End Class 28.14
+     
+//Class 28.15
+    $wp_customizer->add_setting('test_image3', array(
+        'default' => 'Upload Image',
+        'transport' => 'refresh'
+    ));
+    $wp_customizer->add_control(
+        new WP_Customize_Cropped_Image_Control(
+            $wp_customizer,
+            'test_image3',
+            array(
+                'label' => __('Upload a Image for Cropping', 'customizer'),
+                'section' => 'image_and_upload',
+                'width' => 600,
+                'height' => 400,
+                'flex_width' => true,
+                'flex_height' => true,
+                
+            )        
+        )
+    );
+  
+//End Class 28.14
     
     
 }

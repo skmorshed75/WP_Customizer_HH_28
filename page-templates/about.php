@@ -68,6 +68,16 @@ the_post();
                     //$attachment_id = get_theme_mod('test_file');
                     echo $attachment_id;                    
                 //End Class 28.14
+                ?>  
+                <h2>Upload a File 28.15</h2>    
+                <br/>            
+                <br/>            
+                <?php
+                //Class 28.15
+                    //$attachment_id = attachment_url_to_postid(get_theme_mod('test_image3'));
+                    $attachment_id = get_theme_mod('test_image3');
+                    echo "Cropped :".$attachment_id;                    
+                //End Class 28.15
                 ?>                
                 </div>
            </div>
