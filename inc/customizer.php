@@ -138,7 +138,7 @@ function cust_customizer_settings($wp_customizer){
     $wp_customizer->add_control('cust_display_about', array(
         'label' => __('Display about Section', 'customizer'),
         'section' =>'cust_about',
-        'type' => 'checkbox'
+        'type' => 'checkbox',
     ));
     
     $wp_customizer->add_setting('cust_about_heading', array(
@@ -260,6 +260,29 @@ function cust_customizer_settings($wp_customizer){
         'type' => 'week'
     ));
     
+//Class 28.12        SPECIAL CONTROLS
+    
+    $wp_customizer->add_section('image_and_upload',array(
+        'title' => __('Image and Upload','customizer'),
+        'priority' => '30',
+    ));
+    $wp_customizer->add_setting('test_image', array(
+        'default' => 'Upload Image',
+        'transport' => 'refresh'
+    ));
+    $wp_customizer->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customizer,
+            'cust_test_logo',
+            array(
+                'label' => __('Upload and Image', 'customizer'),
+                'section' => 'image_and_upload',
+                'settings' => 'test_image'
+            )        
+        )
+    );
+  
+//End Class 28.12        
     
     
 }
@@ -282,5 +305,4 @@ function service_display_subheading(){
 //    return false;
 //}
 //End Class 28.7
-        
         

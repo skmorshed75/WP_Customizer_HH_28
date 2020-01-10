@@ -6,7 +6,10 @@ Class 28.7
 get_header();
 the_post();
 ?>
-
+<?php
+//echo get_theme_mod('cust_display_about');
+//if(get_theme_mod('cust_display_about',1)):
+?>
 <section>
     <div class="factorian-content-block-area">
         <div class="container">
@@ -34,11 +37,22 @@ the_post();
                     echo apply_filters('the_content', get_theme_mod('cust_about_description'));
                     ?>
                 </p>
+                <?php
+                //Class 28.12  
+                    //echo get_theme_mod('test_image');
+                    $attachment_id = attachment_url_to_postid(get_theme_mod('test_image'));
+                    echo wp_get_attachment_image($attachment_id,'large');
+                    
+                //End Class 28.12    
+                ?>
                 </div>
            </div>
         </div>
     </div>
 </section>
+<?php
+//endif;
+?>
 <?php 
 get_footer();
 ?>
