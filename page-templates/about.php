@@ -37,6 +37,8 @@ the_post();
                     echo apply_filters('the_content', get_theme_mod('cust_about_description'));
                     ?>
                 </p>
+                <br/>
+                <h2>Upload an Image</h2>
                 <?php
                 //Class 28.12  
                     //echo get_theme_mod('test_image');
@@ -45,6 +47,18 @@ the_post();
                     
                 //End Class 28.12    
                 ?>
+                <br/>
+                <br/>
+                <h2>Upload an Media</h2>    
+                <br/>            
+                <br/>            
+                <?php
+                //Class 28.13
+                    $attachment_id = get_theme_mod('test_image2');
+                    echo wp_get_attachment_image($attachment_id,'thumbnail');
+                    
+                //End Class 28.13
+                ?>                
                 </div>
            </div>
         </div>

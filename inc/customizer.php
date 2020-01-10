@@ -283,6 +283,25 @@ function cust_customizer_settings($wp_customizer){
     );
   
 //End Class 28.12        
+     
+//Class 28.13
+    $wp_customizer->add_setting('test_image2', array(
+        'default' => 'Upload Media',
+        'transport' => 'refresh'
+    ));
+    $wp_customizer->add_control(
+        new WP_Customize_Media_Control(
+            $wp_customizer,
+            'cust_test_image2',
+            array(
+                'label' => __('Upload a Media', 'customizer'),
+                'section' => 'image_and_upload',
+                'settings' => 'test_image2'
+            )        
+        )
+    );
+  
+//End Class 28.13
     
     
 }
