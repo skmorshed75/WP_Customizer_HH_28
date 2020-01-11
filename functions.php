@@ -2,6 +2,8 @@
 require_once get_theme_file_path("/inc/customizer.php");
 require_once get_theme_file_path("/lib/cs-framework/cs-framework.php");
 require_once get_theme_file_path("/inc/csf-customizer.php");
+require_once get_theme_file_path("/lib/class-kirki-installation-section.php");
+require_once get_theme_file_path("/inc/kirki.php");
 
 function cust_theme_setup(){
     load_theme_textdomain('customizer', get_template_directory()."/languages");

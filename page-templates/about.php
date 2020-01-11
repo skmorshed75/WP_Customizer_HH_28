@@ -59,7 +59,7 @@ the_post();
                     
                 //End Class 28.13
                 ?>
-                <h2>Upload a File 28.14</h2>    
+                <h2>File Upload Control in Customizer 28.14</h2>    
                 <br/>            
                 <br/>            
                 <?php
@@ -69,7 +69,7 @@ the_post();
                     echo $attachment_id;                    
                 //End Class 28.14
                 ?>  
-                <h2>Upload a File 28.15</h2>    
+                <h2>Uses of Cropped Image Upload Control 28.15</h2>    
                 <br/>            
                 <br/>            
                 <?php
@@ -78,6 +78,15 @@ the_post();
                     $attachment_id = get_theme_mod('test_image3');
                     echo "Cropped :".$attachment_id;                    
                 //End Class 28.15
+                ?> 
+                
+                <h2>Customizer Framework Kirki 28.16</h2>    
+                <br/>            
+                <br/>            
+                <?php
+                //Class 28.16
+                    echo esc_html(get_theme_mod('my_setting'),'customizer');
+                //End Class 28.16
                 ?>                
                 </div>
            </div>
